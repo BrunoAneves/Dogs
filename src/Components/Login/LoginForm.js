@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const LoginForm = () => {
-  const [userName, setUsername] = React.useState("");
+  const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("https://www.dogsapi.origamid.dev/json/jwt-auth/v1/token", {
+    fetch("https://dogsapi.origamid.dev/json/jwt-auth/v1/token", {
       method: "POST",
       headers: {
-        "Content-Type": "applicarion/json",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userName, password }),
+      body: JSON.stringify({ username, password }),
     })
       .then((response) => {
         console.log(response);
@@ -29,7 +29,7 @@ const LoginForm = () => {
       <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
-          value={userName}
+          value={username}
           onChange={({ target }) => setUsername(target.value)}
         ></input>
         <input
