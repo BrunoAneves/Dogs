@@ -5,6 +5,11 @@ const types = {
     regex: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
     message: "Digite um email válido",
   },
+  password: {
+    regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+    message:
+      "should contain at least one digit, one letter lower case, one letter upper case, 8 characters",
+  },
 };
 
 const useForm = (type) => {
