@@ -10,6 +10,10 @@ const types = {
     message:
       "should contain at least one digit, one letter lower case, one letter upper case, 8 characters",
   },
+  number: {
+    regex: /^\d+$/,
+    message: "Utilize apenas números",
+  },
 };
 
 const useForm = (type) => {
