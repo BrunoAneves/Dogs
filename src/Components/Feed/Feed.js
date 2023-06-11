@@ -1,11 +1,14 @@
 import React from "react";
 import UserHeaderNav from "../User/UserHeaderNav";
+import FeedModal from "./FeedModal";
+import FeedPhotos from "./FeedPhotos";
 
 const Feed = () => {
   return (
-    <header>
-      <h1>Titulo</h1>
-    </header>
+    <div>
+      <FeedModal />
+      <FeedPhotos />
+    </div>
   );
 };
 
